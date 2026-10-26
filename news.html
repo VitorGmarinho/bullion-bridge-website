@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Bullion Bridge — connecting professional capital with opportunities across the physical precious metals supply chain." name="description"/>
+<title>News &amp; Insights | Bullion Bridge</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+/* Additive styles for the new sections; original stylesheet stays intact. */
+.bb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.bb-tile{display:flex;flex-direction:column;gap:18px;padding:30px;border:1px solid rgba(160,166,180,.3);background:rgba(100,115,140,.07);min-height:220px;transition:transform .25s,border-color .25s}
+.bb-tile:hover{transform:translateY(-5px);border-color:#d6ad63}
+.bb-tile small{font-size:11px;letter-spacing:.13em;color:#c39b57}
+.bb-tile h3{font-size:clamp(1rem,1.6vw,1.35rem);line-height:1.5;font-weight:600}
+.bb-tile span{margin-top:auto;font-size:12px;letter-spacing:.05em}
+@media(max-width:1050px){.desktop-nav{gap:14px}.desktop-nav a{font-size:10px}}
+</style>
+<style>
+/* Cinematic news: additive only; original homepage CSS and JS are unchanged. */
+.news-hero-cine .hero-title{font-size:clamp(4rem,10vw,10rem)}
+.news-story-section{min-height:100vh;display:flex;align-items:center;padding:110px 0}
+.news-feature-grid{display:grid;grid-template-columns:1.08fr 1fr;gap:clamp(32px,5vw,95px);align-items:center;margin-top:44px}
+.news-feature-grid.news-reverse .news-image-wrap{order:2}
+.news-image-wrap{height:clamp(300px,43vw,580px);position:relative;overflow:hidden;border:1px solid rgba(212,171,104,.3)}
+.news-image-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,17,34,.4),transparent 65%);pointer-events:none}
+.news-image-wrap img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.news-image-wrap:hover img{transform:scale(1.05)}
+.news-meta{font-size:11px;letter-spacing:.2em;color:#d4ab68;font-weight:700}
+.news-feature-copy h2{font-family:Manrope,sans-serif;font-size:clamp(2.6rem,5.2vw,6.5rem);line-height:1.02;letter-spacing:-.055em;margin:20px 0}
+.news-feature-copy h3{font-family:Manrope,sans-serif;font-size:clamp(1.3rem,2vw,2rem);line-height:1.35;margin:0 0 18px}
+.news-feature-copy p,.news-article p{font-size:clamp(15px,1.35vw,18px);line-height:1.85;max-width:600px;opacity:.8}
+.news-feature-copy .outline-button{margin-top:28px;display:inline-flex}
+.news-reading{padding:110px 0 150px;min-height:100vh}
+.news-reading-title{font-size:clamp(3.4rem,7vw,8rem);letter-spacing:-.06em;line-height:1.05;margin:35px 0 60px}
+.news-article{border-top:1px solid rgba(180,180,180,.25);padding:36px 0 46px;scroll-margin-top:100px}
+.news-article h3{font-size:clamp(1.5rem,3vw,2.7rem);line-height:1.2;margin:14px 0 22px;max-width:850px}
+.news-disclaimer{font-size:12px;opacity:.7;line-height:1.7;max-width:700px;margin:35px 0}
+@media(max-width:800px){.news-story-section{padding:90px 0}.news-feature-grid{grid-template-columns:1fr;gap:28px}.news-feature-grid.news-reverse .news-image-wrap{order:0}.news-image-wrap{height:320px}.news-feature-copy h2{font-size:clamp(2.6rem,10vw,4.5rem)}.news-reading{padding:90px 0}}
+</style><style id="news-cursor-fix">
+/* News cursor fallback: independent of homepage CSS and animation initialization. */
+@media (hover:hover) and (pointer:fine) {
+  body, a, button { cursor: none !important; }
+  #custom-cursor, #cursor-ring { position:fixed !important; left:0; top:0; display:block !important; visibility:visible !important; opacity:1 !important; pointer-events:none !important; border-radius:50%; }
+  #custom-cursor { width:7px !important; height:7px !important; background:#d6ad63 !important; z-index:2147483647 !important; transform:translate(-50%,-50%) !important; }
+  #cursor-ring { width:38px !important; height:38px !important; border:1px solid rgba(214,173,99,.85) !important; background:rgba(214,173,99,.06) !important; z-index:2147483646 !important; transform:translate(-50%,-50%) !important; transition:width .2s,height .2s !important; }
+  #cursor-ring.hover { width:56px !important; height:56px !important; }
+}
+@media (hover:none), (pointer:coarse) { #custom-cursor,#cursor-ring { display:none !important; } }
+</style>
+</head>
+<body>
+<!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+<div class="loader" id="loader">
+<div class="loader-logo">
+<span>BULLION</span>
+<strong>BRIDGE</strong>
+</div>
+<div class="loader-line">
+<span></span>
+</div>
+<div class="loader-number">
+<span id="loader-number">0</span>%
+        </div>
+</div>
+<!-- =========================================
+         BACKGROUND
+    ========================================== -->
+<div class="site-background">
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+<div class="background-grid"></div>
+</div>
+<!-- =========================================
+         SCROLL PROGRESS
+    ========================================== -->
+<div class="scroll-progress">
+<div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+</div>
+<!-- =========================================
+         HEADER
+    ========================================== -->
+<header class="site-header" id="site-header">
+<div class="header-inner">
+<!-- Logo -->
+<a aria-label="Bullion Bridge home" class="brand" href="index.html">
+<span class="brand-mark">
+                    BB
+                </span>
+<span class="brand-name">
+<strong>BULLION</strong>
+<small>BRIDGE</small>
+</span>
+</a>
+<!-- Desktop Navigation -->
+<nav aria-label="Main navigation" class="desktop-nav">
+<a href="about.html">
+                    About Us
+                </a>
+<a href="index.html#opportunity">
+                    Opportunity
+                </a>
+<a href="index.html#bond">
+                    Gold Bond
+                </a>
+<a href="index.html#process">
+                    How it works
+                </a>
+<a href="index.html#responsible">
+                    Responsible sourcing
+                </a>
+</nav>
+<a class="header-contact" href="news.html" style="padding:10px 16px">News</a>
+<a class="header-contact" href="index.html#documents" style="padding:10px 16px">Documents</a>
+<!-- CTA -->
+<a class="header-contact" href="index.html#contact">
+<span>Speak to us</span>
+<span class="header-contact-arrow">
+                    ↗
+                </span>
+</a>
+<!-- Mobile Menu Button -->
+<button aria-expanded="false" aria-label="Open navigation" class="menu-button" id="menu-button" type="button">
+<span></span>
+<span></span>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+<a href="about.html">
+                About Us
+            </a>
+<a href="index.html#opportunity">
+                Opportunity
+            </a>
+<a href="index.html#bond">
+                Gold Bond
+            </a>
+<a href="index.html#process">
+                How it works
+            </a>
+<a href="index.html#responsible">
+                Responsible sourcing
+            </a>
+<a href="news.html">News</a>
+<a href="index.html#documents">Documents</a>
+<a href="index.html#contact">
+                Speak to us
+            </a>
+</div>
+</header>
+<!-- =========================================
+         SIDE NAVIGATION
+    ========================================== -->
+<aside class="side-navigation">
+<span class="side-number">
+            01
+        </span>
+<div class="side-line">
+<span id="side-line-progress"></span>
+</div>
+<span class="side-number">
+            06
+        </span>
+</aside>
+<!-- =========================================
+         MAIN
+    ========================================== -->
+<main>
+<section class="story-section hero-section news-hero-cine" data-section="01" id="home">
+<div class="section-orb orb-one"></div><div class="section-content hero-content">
+<div class="section-label reveal"><span class="label-line"></span><span>BULLION BRIDGE / EDITORIAL</span><span class="label-number">01</span></div>
+<h1 class="hero-title"><span class="title-line reveal">NEWS &amp;</span><span class="title-line gold-text reveal">INSIGHTS.</span></h1>
+<div class="hero-bottom"><p class="hero-description reveal">Company announcements, precious metals news and market perspectives — presented with the cinematic experience of Bullion Bridge.</p><a class="scroll-indicator reveal" href="#featured"><span class="scroll-circle">↓</span><span>EXPLORE STORIES</span></a></div>
+<div class="hero-meta reveal"><span>COMPANY NEWS</span><span>GOLD MARKETS</span><span>ARCHIVE</span></div>
+</div></section>
+<section class="story-section opportunity-section news-story-section" data-section="02" id="featured"><div class="section-content">
+<div class="section-label reveal"><span class="label-line"></span><span>FEATURED COMPANY UPDATE</span><span class="label-number">02</span></div>
+<div class="news-feature-grid"><div class="news-image-wrap reveal"><img alt="Cargo ship representing international metals logistics" loading="lazy" src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&amp;fit=crop&amp;w=1500&amp;q=85"/></div><div class="news-feature-copy"><span class="news-meta reveal">01 JULY 2025 / COMPANY</span><h2 class="reveal">GLOBAL <span class="gold-text">LOGISTICS.</span></h2><h3 class="reveal">Nicolas Cabrera appointed Global Logistics Manager</h3><p class="reveal">A Bullion Bridge company announcement concerning its global logistics leadership and the importance of transport across the physical metals supply chain.</p><a class="outline-button reveal" href="#logistics"><span>READ THE SUMMARY</span><span>↗</span></a></div></div>
+</div></section>
+<section class="story-section process-section news-story-section" data-section="03" id="gold-levels"><div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>GOLD MARKET / 02 APRIL 2025</span><span class="label-number">03</span></div><div class="news-feature-grid news-reverse"><div class="news-image-wrap reveal"><img alt="Gold bars illustrating precious metals markets" loading="lazy" src="https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&amp;fit=crop&amp;w=1500&amp;q=85"/></div><div class="news-feature-copy"><span class="news-meta reveal">MARKET COMMENTARY</span><h2 class="reveal">RECORD <span class="gold-text">HIGHS.</span></h2><h3 class="reveal">Gold price levels to watch as the metal reaches record highs</h3><p class="reveal">A historical market headline exploring gold prices during a period of record-setting performance. This is an archive topic, not a live market update.</p><a class="outline-button reveal" href="#gold-summary"><span>READ THE SUMMARY</span><span>↗</span></a></div></div></div></section>
+<section class="story-section responsible-section news-story-section" data-section="04" id="forecast"><div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>MARKET OUTLOOK / 26 MARCH 2025</span><span class="label-number">04</span></div><div class="news-feature-grid"><div class="news-image-wrap reveal"><img alt="Financial market data displayed on a screen" loading="lazy" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&amp;fit=crop&amp;w=1500&amp;q=85"/></div><div class="news-feature-copy"><span class="news-meta reveal">MARKET FORECASTS</span><h2 class="reveal">GOLD <span class="gold-text">OUTLOOK.</span></h2><h3 class="reveal">BofA raises gold price forecasts for 2025 and 2026</h3><p class="reveal">An archived report on Bank of America's upward revisions to its gold price forecasts. Historical forecasts are not guarantees of future results.</p><a class="outline-button reveal" href="#forecast-summary"><span>READ THE SUMMARY</span><span>↗</span></a></div></div></div></section>
+<section class="story-section process-section news-reading" data-section="05" id="logistics"><div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>READ THE STORIES</span><span class="label-number">05</span></div><h2 class="news-reading-title reveal">THE <span class="gold-text">DETAILS.</span></h2>
+<article class="news-article reveal"><span class="news-meta">01 JUL 2025 · COMPANY UPDATE</span><h3>Nicolas Cabrera appointed Global Logistics Manager</h3><p>Bullion Bridge's news archive includes an announcement of Nicolas Cabrera's appointment as Global Logistics Manager. Logistics is a central consideration in the physical metals supply chain.</p><p>This is a brief overview based on the archived headline. Full approved company-announcement text can be added here later.</p></article>
+<article class="news-article reveal" id="gold-summary"><span class="news-meta">02 APR 2025 · GOLD MARKET</span><h3>Gold price levels to watch as the metal reaches record highs</h3><p>The April 2025 archive highlights gold price levels during a period of record-setting prices. Price movements and volatility are important considerations for precious metals market participants.</p><p>This is a contextual summary of the historical topic, not a reproduction of the original article or an update on current prices.</p></article>
+<article class="news-article reveal" id="forecast-summary"><span class="news-meta">26 MAR 2025 · MARKET OUTLOOK</span><h3>BofA raises gold price forecasts for 2025 and 2026</h3><p>The March 2025 archive references upward revisions to gold price forecasts by Bank of America. Forecasts reflect views at the time and should not be treated as guarantees of future performance.</p><p>This is a short historical summary; the full original analysis and specific forecast figures have not been reproduced.</p></article>
+<p class="news-disclaimer reveal">Editorial archive drafts for review. Article summaries are not investment advice and do not reproduce complete third-party reporting.</p>
+<a class="outline-button reveal" href="index.html"><span>RETURN TO HOMEPAGE</span><span>↗</span></a>
+</div></section>
+</main>
+<!-- =========================================
+         CUSTOM CURSOR
+    ========================================== -->
+<div class="custom-cursor" id="custom-cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script id="news-cursor-fallback">
+/* Independent pointer handler: keeps the gold cursor visible even if the shared JS has an error. */
+(() => {
+  if (!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  const dot = document.getElementById('custom-cursor');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+  let x = -100, y = -100, rx = -100, ry = -100;
+  window.addEventListener('pointermove', e => {
+    x = e.clientX; y = e.clientY;
+    dot.style.left = x + 'px'; dot.style.top = y + 'px';
+  }, {passive:true});
+  function frame() {
+    rx += (x-rx)*0.18; ry += (y-ry)*0.18;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(frame);
+  }
+  frame();
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('pointerenter', () => ring.classList.add('hover'));
+    el.addEventListener('pointerleave', () => ring.classList.remove('hover'));
+  });
+})();
+</script>
+</body>
+</html>

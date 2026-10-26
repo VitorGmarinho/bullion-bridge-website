@@ -24,6 +24,30 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+<style>
+/* Additive styles for the new sections; original stylesheet stays intact. */
+.bb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.bb-tile{display:flex;flex-direction:column;gap:18px;padding:30px;border:1px solid rgba(160,166,180,.3);background:rgba(100,115,140,.07);min-height:220px;transition:transform .25s,border-color .25s}
+.bb-tile:hover{transform:translateY(-5px);border-color:#d6ad63}
+.bb-tile small{font-size:11px;letter-spacing:.13em;color:#c39b57}
+.bb-tile h3{font-size:clamp(1rem,1.6vw,1.35rem);line-height:1.5;font-weight:600}
+.bb-tile span{margin-top:auto;font-size:12px;letter-spacing:.05em}
+@media(max-width:1050px){.desktop-nav{gap:14px}.desktop-nav a{font-size:10px}}
+</style>
+<style id="bb-header-navigation-fix">
+/* Keep all links visible on desktop without affecting page sections. */
+@media (min-width: 1101px) {
+  .site-header .header-inner { gap: clamp(8px, 1vw, 18px); }
+  .site-header .desktop-nav { display: flex; flex: 1 1 auto; min-width: 0; justify-content: center; gap: clamp(9px, 1.2vw, 22px); }
+  .site-header .desktop-nav a { white-space: nowrap; font-size: clamp(9px, .72vw, 12px); }
+  .site-header .header-contact { flex-shrink: 0; white-space: nowrap; padding: 10px 12px !important; font-size: 11px; }
+  .site-header .brand { flex-shrink: 0; }
+}
+@media (min-width: 1101px) and (max-width: 1450px) {
+  .site-header .desktop-nav { gap: 10px; }
+  .site-header .header-contact { padding: 9px 10px !important; font-size: 10px; }
+}
+</style>
 </head>
 
 
@@ -116,6 +140,10 @@
                 aria-label="Main navigation"
             >
 
+                <a href="about.html">
+                    About Us
+                </a>
+
                 <a href="#opportunity">
                     Opportunity
                 </a>
@@ -131,10 +159,14 @@
                 <a href="#responsible">
                     Responsible sourcing
                 </a>
+                <a href="markets.html" class="nav-markets">Markets</a>
 
             </nav>
 
 
+            <!-- Markets is included in the main desktop navigation above. -->
+            <a href="news.html" class="header-contact" style="padding:10px 16px">News</a>
+            <a href="documents.html" class="header-contact" style="padding:10px 16px">Documents</a>
             <!-- CTA -->
 
             <a
@@ -176,6 +208,10 @@
             id="mobile-menu"
         >
 
+            <a href="about.html">
+                About Us
+            </a>
+
             <a href="#opportunity">
                 Opportunity
             </a>
@@ -192,6 +228,9 @@
                 Responsible sourcing
             </a>
 
+            <a href="markets.html">Markets</a>
+            <a href="news.html">News</a>
+            <a href="documents.html">Documents</a>
             <a href="#contact">
                 Speak to us
             </a>
@@ -327,7 +366,7 @@
                     </span>
 
                     <span>
-                        EST. 2021
+                        EST. 2020
                     </span>
 
                 </div>
@@ -428,11 +467,11 @@
                             <div class="stat">
 
                                 <span class="stat-value">
-                                    6+
+                                    3
                                 </span>
 
                                 <span class="stat-label">
-                                    OPERATING MINES
+                                    MINING LICENCES IN TANZANIA
                                 </span>
 
                             </div>
@@ -954,6 +993,46 @@
              06 — CONTACT
         ====================================== -->
 
+
+<!-- Expanded official-site content. Existing CSS/JS retained. -->
+<section class="story-section opportunity-section" id="company" data-section="05">
+  <div class="section-content">
+    <div class="section-label reveal"><span class="label-line"></span><span>ABOUT BULLION BRIDGE</span></div>
+    <div class="split-layout"><div class="split-title"><h2 class="reveal" style="font-size:clamp(2.8rem,5vw,5.5rem)">INTERNATIONAL <span class="gold-text">METALS.</span></h2></div>
+    <div class="split-copy"><p class="large-text reveal">International metals logistics, sourcing and consultancy.</p>
+    <p class="reveal">Bullion Bridge Limited works across the physical metals supply chain, including gold, silver, copper and cobalt. The business connects suppliers and buyers and supports sourcing, logistics and technical expertise.</p>
+    <p class="reveal">The company describes its work with community-based producers and aims to support local infrastructure and economic development.</p>
+    <p class="reveal">Its activities include precious metals trading, production financing and mining.</p></div></div>
+  </div>
+</section>
+<section class="story-section process-section" id="markets" data-section="06">
+ <div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>MARKET INFORMATION</span></div>
+ <h2 class="reveal" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:28px">GOLD &amp; <span class="gold-text">SILVER.</span></h2>
+ <p class="reveal" style="max-width:650px;line-height:1.8">Explore market pricing and historical charts through Bullion Bridge's existing market information page. Live pricing is supplied by third parties and should not be treated as an executable quote.</p>
+ <a class="outline-button reveal" href="markets.html" style="display:inline-flex;margin-top:25px"><span>View current market information</span><span>↗</span></a>
+ </div>
+</section>
+<section class="story-section opportunity-section" id="news" data-section="07">
+ <div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>COMPANY NEWS</span></div>
+ <h2 class="reveal" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:32px">LATEST <span class="gold-text">UPDATES.</span></h2>
+ <div class="bb-grid">
+ <a class="bb-tile reveal" href="news.html#logistics"><small>01 JUL 2025</small><h3>Nicolas Cabrera appointed as Global Logistics Manager</h3><span>Read on new website ↗</span></a>
+ <a class="bb-tile reveal" href="news.html#gold-levels"><small>02 APR 2025</small><h3>Watch these gold price levels as precious metal keeps hitting record highs</h3><span>Read article ↗</span></a>
+ <a class="bb-tile reveal" href="news.html#forecast"><small>26 MAR 2025</small><h3>BofA raises gold price forecasts for 2025 and 2026</h3><span>Read article ↗</span></a>
+ </div></div>
+</section>
+<section class="story-section process-section" id="documents" data-section="08">
+ <div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>RESEARCH &amp; DOCUMENTS</span></div>
+ <h2 class="reveal" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:32px">INDUSTRY <span class="gold-text">RESOURCES.</span></h2>
+ <div class="bb-grid">
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/wp-content/uploads/2020/05/OECD-Report-Responsible-Supply-Chains-in-Artisanal-and-Small-Scale-Gold-Mining.pdf" target="_blank" rel="noopener noreferrer"><small>OECD</small><h3>Responsible Supply Chains in Artisanal and Small-Scale Gold Mining</h3><span>Open PDF ↗</span></a>
+ <a class="bb-tile reveal" href="documents.html#catalogue"><small>ARTISANAL GOLD COUNCIL</small><h3>Improving Access to Finance</h3><span>View in document library ↗</span></a>
+ <a class="bb-tile reveal" href="documents.html#catalogue"><small>INTERGOVERNMENTAL FORUM</small><h3>Global Trends in Artisanal and Small-Scale Mining</h3><span>View in document library ↗</span></a>
+ <a class="bb-tile reveal" href="documents.html#catalogue"><small>INTERGOVERNMENTAL FORUM</small><h3>Women in Artisanal and Small-Scale Mining</h3><span>View in document library ↗</span></a>
+ <a class="bb-tile reveal" href="documents.html#catalogue"><small>USAID</small><h3>Sector Environmental Guideline: Artisanal and Small-Scale Mining</h3><span>View in document library ↗</span></a>
+ </div></div>
+</section>
+
         <section
             class="story-section contact-section"
             id="contact"
@@ -1012,7 +1091,7 @@
 
 
                     <a
-                        href="mailto:info@bullionbridge.com"
+                        href="mailto:hello@bullionbridge.com"
                         class="contact-button reveal"
                     >
 
@@ -1101,7 +1180,7 @@
                 </p>
 
                 <span>
-                    © 2026 Bullion Bridge
+                    © 2026 Bullion Bridge Limited · Company No. 12416766 · 1–2 Charterhouse Mews, London EC1M 6BB
                 </span>
 
             </div>

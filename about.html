@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Bullion Bridge — connecting professional capital with opportunities across the physical precious metals supply chain."
+    >
+
+    <title>Bullion Bridge | Precious Metals Investment</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+<style>
+/* Additive styles for the new sections; original stylesheet stays intact. */
+.bb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.bb-tile{display:flex;flex-direction:column;gap:18px;padding:30px;border:1px solid rgba(160,166,180,.3);background:rgba(100,115,140,.07);min-height:220px;transition:transform .25s,border-color .25s}
+.bb-tile:hover{transform:translateY(-5px);border-color:#d6ad63}
+.bb-tile small{font-size:11px;letter-spacing:.13em;color:#c39b57}
+.bb-tile h3{font-size:clamp(1rem,1.6vw,1.35rem);line-height:1.5;font-weight:600}
+.bb-tile span{margin-top:auto;font-size:12px;letter-spacing:.05em}
+@media(max-width:1050px){.desktop-nav{gap:14px}.desktop-nav a{font-size:10px}}
+</style>
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+
+    <div class="loader" id="loader">
+
+        <div class="loader-logo">
+            <span>BULLION</span>
+            <strong>BRIDGE</strong>
+        </div>
+
+        <div class="loader-line">
+            <span></span>
+        </div>
+
+        <div class="loader-number">
+            <span id="loader-number">0</span>%
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         BACKGROUND
+    ========================================== -->
+
+    <div class="site-background">
+
+        <div class="background-glow glow-one"></div>
+        <div class="background-glow glow-two"></div>
+
+        <div class="background-grid"></div>
+
+    </div>
+
+
+    <!-- =========================================
+         SCROLL PROGRESS
+    ========================================== -->
+
+    <div class="scroll-progress">
+
+        <div
+            class="scroll-progress-bar"
+            id="scroll-progress-bar"
+        ></div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header" id="site-header">
+
+        <div class="header-inner">
+
+            <!-- Logo -->
+
+            <a
+                href="#home"
+                class="brand"
+                aria-label="Bullion Bridge home"
+            >
+
+                <span class="brand-mark">
+                    BB
+                </span>
+
+                <span class="brand-name">
+
+                    <strong>BULLION</strong>
+                    <small>BRIDGE</small>
+
+                </span>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <nav
+                class="desktop-nav"
+                aria-label="Main navigation"
+            >
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="#opportunity">
+                    Opportunity
+                </a>
+
+                <a href="#bond">
+                    Gold Bond
+                </a>
+
+                <a href="#process">
+                    How it works
+                </a>
+
+                <a href="#responsible">
+                    Responsible sourcing
+                </a>
+
+            </nav>
+
+
+            <a href="#news" class="header-contact" style="padding:10px 16px">News</a>
+            <a href="#documents" class="header-contact" style="padding:10px 16px">Documents</a>
+            <!-- CTA -->
+
+            <a
+                href="#contact"
+                class="header-contact"
+            >
+
+                <span>Speak to us</span>
+
+                <span class="header-contact-arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button
+                class="menu-button"
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div
+            class="mobile-menu"
+            id="mobile-menu"
+        >
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="#opportunity">
+                Opportunity
+            </a>
+
+            <a href="#bond">
+                Gold Bond
+            </a>
+
+            <a href="#process">
+                How it works
+            </a>
+
+            <a href="#responsible">
+                Responsible sourcing
+            </a>
+
+            <a href="#news">News</a>
+            <a href="#documents">Documents</a>
+            <a href="#contact">
+                Speak to us
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         SIDE NAVIGATION
+    ========================================== -->
+
+    <aside class="side-navigation">
+
+        <span class="side-number">
+            01
+        </span>
+
+        <div class="side-line">
+
+            <span id="side-line-progress"></span>
+
+        </div>
+
+        <span class="side-number">
+            06
+        </span>
+
+    </aside>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             01 — HERO
+        ====================================== -->
+
+        <section
+            class="story-section hero-section"
+            id="home"
+            data-section="01"
+        >
+
+            <div class="section-orb orb-one"></div>
+
+            <div class="section-content hero-content">
+
+
+                <!-- Small heading -->
+
+                <div class="section-label reveal">
+
+                    <span class="label-line"></span>
+
+                    <span>
+                        PRECIOUS METALS
+                    </span>
+
+                    <span class="label-number">
+                        01
+                    </span>
+
+                </div>
+
+
+                <!-- Hero title -->
+
+                <h1 class="hero-title">
+
+                    <span class="title-line reveal">
+                        BRIDGING
+                    </span>
+
+                    <span class="title-line reveal">
+                        CAPITAL WITH
+                    </span>
+
+                    <span class="title-line gold-text reveal">
+                        PHYSICAL GOLD.
+                    </span>
+
+                </h1>
+
+
+                <!-- Description -->
+
+                <div class="hero-bottom">
+
+                    <p class="hero-description reveal">
+
+                        Bullion Bridge connects professional
+                        capital with opportunities across the
+                        production, purchase and refining of
+                        physical precious metals.
+
+                    </p>
+
+
+                    <a
+                        href="#opportunity"
+                        class="scroll-indicator reveal"
+                    >
+
+                        <span class="scroll-circle">
+                            ↓
+                        </span>
+
+                        <span>
+                            DISCOVER
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Hero meta -->
+
+                <div class="hero-meta reveal">
+
+                    <span>
+                        LONDON
+                    </span>
+
+                    <span>
+                        PRECIOUS METALS
+                    </span>
+
+                    <span>
+                        EST. 2020
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             02 — OPPORTUNITY
+        ====================================== -->
+
+        <section
+            class="story-section opportunity-section"
+            id="opportunity"
+            data-section="02"
+        >
+
+            <div class="section-content">
+
+
+                <div class="section-label reveal">
+
+                    <span class="label-line"></span>
+
+                    <span>
+                        THE OPPORTUNITY
+                    </span>
+
+                    <span class="label-number">
+                        02
+                    </span>
+
+                </div>
+
+
+                <div class="split-layout">
+
+
+                    <!-- Left -->
+
+                    <div class="split-title">
+
+                        <h2>
+
+                            <span class="reveal">
+                                REAL
+                            </span>
+
+                            <span class="reveal">
+                                ASSETS.
+                            </span>
+
+                            <span class="gold-text reveal">
+                                REAL PROCESS.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <!-- Right -->
+
+                    <div class="split-copy">
+
+                        <p class="large-text reveal">
+
+                            Precious metals begin with
+                            physical production.
+
+                        </p>
+
+                        <p class="reveal">
+
+                            Bullion Bridge provides access to
+                            opportunities linked to financing
+                            across the physical gold supply
+                            chain.
+
+                        </p>
+
+                        <p class="reveal">
+
+                            Capital can be deployed through
+                            selected asset managers to finance
+                            gold production and the purchase
+                            of gold doré from vetted mining
+                            facilities.
+
+                        </p>
+
+
+                        <div class="opportunity-stats reveal">
+
+
+                            <div class="stat">
+
+                                <span class="stat-value">
+                                    3
+                                </span>
+
+                                <span class="stat-label">
+                                    MINING LICENCES IN TANZANIA
+                                </span>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <span class="stat-value">
+                                    ~30
+                                </span>
+
+                                <span class="stat-label">
+                                    DAY PRODUCTION CYCLE
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             03 — GOLD BOND
+        ====================================== -->
+
+        <section
+            class="story-section bond-section"
+            id="bond"
+            data-section="03"
+        >
+
+            <div class="bond-glow"></div>
+
+
+            <div class="section-content">
+
+
+                <div class="section-label light reveal">
+
+                    <span class="label-line"></span>
+
+                    <span>
+                        CURRENT OPPORTUNITY
+                    </span>
+
+                    <span class="label-number">
+                        03
+                    </span>
+
+                </div>
+
+
+                <div class="bond-layout">
+
+
+                    <!-- Bond copy -->
+
+                    <div class="bond-copy">
+
+                        <span class="bond-small reveal">
+                            GOLD BOND
+                        </span>
+
+
+                        <h2>
+
+                            <span class="reveal">
+                                FIXED
+                            </span>
+
+                            <span class="gold-text reveal">
+                                RETURN.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="reveal">
+
+                            A fixed-term investment opportunity
+                            connected to the financing of
+                            physical precious metals production.
+
+                        </p>
+
+
+                        <a
+                            href="#process"
+                            class="outline-button reveal"
+                        >
+
+                            <span>
+                                Explore the process
+                            </span>
+
+                            <span>
+                                →
+                            </span>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Rate -->
+
+                    <div class="rate-display reveal">
+
+                        <span class="rate-label">
+                            FIXED ANNUAL RATE
+                        </span>
+
+                        <div class="rate-number">
+
+                            <strong>
+                                9
+                            </strong>
+
+                            <span>
+                                %
+                            </span>
+
+                        </div>
+
+                        <span class="rate-pa">
+                            PER ANNUM
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bond details -->
+
+                <div class="bond-details reveal">
+
+
+                    <div class="bond-detail">
+
+                        <span>
+                            DENOMINATIONS
+                        </span>
+
+                        <strong>
+                            FROM 10,000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="bond-detail">
+
+                        <span>
+                            CURRENCIES
+                        </span>
+
+                        <strong>
+                            EUR · GBP · USD
+                        </strong>
+
+                    </div>
+
+
+                    <div class="bond-detail">
+
+                        <span>
+                            INTEREST
+                        </span>
+
+                        <strong>
+                            FIXED RATE
+                        </strong>
+
+                    </div>
+
+
+                    <div class="bond-detail">
+
+                        <span>
+                            EARLY REDEMPTION
+                        </span>
+
+                        <strong>
+                            NOT AVAILABLE
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             04 — HOW IT WORKS
+        ====================================== -->
+
+        <section
+            class="story-section process-section"
+            id="process"
+            data-section="04"
+        >
+
+            <div class="section-content">
+
+
+                <div class="section-label reveal">
+
+                    <span class="label-line"></span>
+
+                    <span>
+                        THE PROCESS
+                    </span>
+
+                    <span class="label-number">
+                        04
+                    </span>
+
+                </div>
+
+
+                <div class="process-heading">
+
+                    <h2>
+
+                        <span class="reveal">
+                            FROM CAPITAL
+                        </span>
+
+                        <span class="gold-text reveal">
+                            TO GOLD.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="reveal">
+
+                        A physical supply chain connecting
+                        investment capital with production,
+                        transport, assay and refining.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Process -->
+
+                <div class="process-list">
+
+
+                    <article class="process-row reveal">
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Investor subscription
+                        </h3>
+
+                        <p>
+                            Eligible investors subscribe to
+                            the investment opportunity.
+                        </p>
+
+                        <span class="process-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="process-row reveal">
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Production financing
+                        </h3>
+
+                        <p>
+                            Capital is deployed to selected
+                            asset managers financing gold
+                            production.
+                        </p>
+
+                        <span class="process-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="process-row reveal">
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Gold doré production
+                        </h3>
+
+                        <p>
+                            Gold doré is produced through
+                            vetted operating mining
+                            facilities.
+                        </p>
+
+                        <span class="process-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="process-row reveal">
+
+                        <span class="process-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Assay & refining
+                        </h3>
+
+                        <p>
+                            Material moves through transport,
+                            testing and established refinery
+                            channels.
+                        </p>
+
+                        <span class="process-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                    <article class="process-row reveal">
+
+                        <span class="process-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Maturity
+                        </h3>
+
+                        <p>
+                            Capital and applicable interest
+                            are paid following maturity in
+                            accordance with the bond terms.
+                        </p>
+
+                        <span class="process-arrow">
+                            ↗
+                        </span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             05 — RESPONSIBLE SOURCING
+        ====================================== -->
+
+        <section
+            class="story-section responsible-section"
+            id="responsible"
+            data-section="05"
+        >
+
+            <div class="section-content">
+
+
+                <div class="section-label reveal">
+
+                    <span class="label-line"></span>
+
+                    <span>
+                        RESPONSIBLE SOURCING
+                    </span>
+
+                    <span class="label-number">
+                        05
+                    </span>
+
+                </div>
+
+
+                <div class="responsible-layout">
+
+
+                    <div>
+
+                        <h2>
+
+                            <span class="reveal">
+                                GOLD WITH
+                            </span>
+
+                            <span class="gold-text reveal">
+                                RESPONSIBILITY.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="responsible-copy">
+
+                        <p class="large-text reveal">
+
+                            Responsibility should extend
+                            throughout the supply chain.
+
+                        </p>
+
+                        <p class="reveal">
+
+                            Due diligence, sourcing standards
+                            and operational oversight are
+                            important considerations within
+                            the precious metals industry.
+
+                        </p>
+
+
+                        <div class="location-list reveal">
+
+
+                            <div>
+
+                                <span>
+                                    01
+                                </span>
+
+                                <strong>
+                                    EUROPE
+                                </strong>
+
+                                <small>
+                                    REFINING
+                                </small>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    02
+                                </span>
+
+                                <strong>
+                                    DUBAI
+                                </strong>
+
+                                <small>
+                                    REFINING
+                                </small>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    03
+                                </span>
+
+                                <strong>
+                                    HONG KONG
+                                </strong>
+
+                                <small>
+                                    REFINING
+                                </small>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             06 — CONTACT
+        ====================================== -->
+
+
+<!-- Expanded official-site content. Existing CSS/JS retained. -->
+<section class="story-section opportunity-section" id="company" data-section="05">
+  <div class="section-content">
+    <div class="section-label reveal"><span class="label-line"></span><span>ABOUT BULLION BRIDGE</span></div>
+    <div class="split-layout"><div class="split-title"><h2 class="reveal" style="font-size:clamp(2.8rem,5vw,5.5rem)">INTERNATIONAL <span class="gold-text">METALS.</span></h2></div>
+    <div class="split-copy"><p class="large-text reveal">International metals logistics, sourcing and consultancy.</p>
+    <p class="reveal">Bullion Bridge Limited works across the physical metals supply chain, including gold, silver, copper and cobalt. The business connects suppliers and buyers and supports sourcing, logistics and technical expertise.</p>
+    <p class="reveal">The company describes its work with community-based producers and aims to support local infrastructure and economic development.</p>
+    <p class="reveal">Its activities include precious metals trading, production financing and mining.</p></div></div>
+  </div>
+</section>
+<section class="story-section process-section" id="markets" data-section="06">
+ <div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>MARKET INFORMATION</span></div>
+ <h2 class="reveal" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:28px">GOLD &amp; <span class="gold-text">SILVER.</span></h2>
+ <p class="reveal" style="max-width:650px;line-height:1.8">Explore market pricing and historical charts through Bullion Bridge's existing market information page. Live pricing is supplied by third parties and should not be treated as an executable quote.</p>
+ <a class="outline-button reveal" href="https://www.bullionbridge.com/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;margin-top:25px"><span>View current market information</span><span>↗</span></a>
+ </div>
+</section>
+<section class="story-section opportunity-section" id="news" data-section="07">
+ <div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>COMPANY NEWS</span></div>
+ <h2 class="reveal" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:32px">LATEST <span class="gold-text">UPDATES.</span></h2>
+ <div class="bb-grid">
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/" target="_blank" rel="noopener noreferrer"><small>01 JUL 2025</small><h3>Nicolas Cabrera appointed as Global Logistics Manager</h3><span>Read on Bullion Bridge ↗</span></a>
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/2025/04/02/watch-these-gold-price-levels-as-precious-metal-keeps-hitting-record-highs/" target="_blank" rel="noopener noreferrer"><small>02 APR 2025</small><h3>Watch these gold price levels as precious metal keeps hitting record highs</h3><span>Read article ↗</span></a>
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/2025/03/26/bofa-raises-gold-price-forecasts-for-2025-2026/" target="_blank" rel="noopener noreferrer"><small>26 MAR 2025</small><h3>BofA raises gold price forecasts for 2025 and 2026</h3><span>Read article ↗</span></a>
+ </div></div>
+</section>
+<section class="story-section process-section" id="documents" data-section="08">
+ <div class="section-content"><div class="section-label reveal"><span class="label-line"></span><span>RESEARCH &amp; DOCUMENTS</span></div>
+ <h2 class="reveal" style="font-size:clamp(2.5rem,5vw,5rem);margin-bottom:32px">INDUSTRY <span class="gold-text">RESOURCES.</span></h2>
+ <div class="bb-grid">
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/wp-content/uploads/2020/05/OECD-Report-Responsible-Supply-Chains-in-Artisanal-and-Small-Scale-Gold-Mining.pdf" target="_blank" rel="noopener noreferrer"><small>OECD</small><h3>Responsible Supply Chains in Artisanal and Small-Scale Gold Mining</h3><span>Open PDF ↗</span></a>
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/" target="_blank" rel="noopener noreferrer"><small>ARTISANAL GOLD COUNCIL</small><h3>Improving Access to Finance</h3><span>View documents on original site ↗</span></a>
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/" target="_blank" rel="noopener noreferrer"><small>INTERGOVERNMENTAL FORUM</small><h3>Global Trends in Artisanal and Small-Scale Mining</h3><span>View documents on original site ↗</span></a>
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/" target="_blank" rel="noopener noreferrer"><small>INTERGOVERNMENTAL FORUM</small><h3>Women in Artisanal and Small-Scale Mining</h3><span>View documents on original site ↗</span></a>
+ <a class="bb-tile reveal" href="https://www.bullionbridge.com/" target="_blank" rel="noopener noreferrer"><small>USAID</small><h3>Sector Environmental Guideline: Artisanal and Small-Scale Mining</h3><span>View documents on original site ↗</span></a>
+ </div></div>
+</section>
+
+        <section
+            class="story-section contact-section"
+            id="contact"
+            data-section="06"
+        >
+
+            <div class="contact-glow"></div>
+
+
+            <div class="section-content contact-content">
+
+
+                <div class="section-label light reveal">
+
+                    <span class="label-line"></span>
+
+                    <span>
+                        START A CONVERSATION
+                    </span>
+
+                    <span class="label-number">
+                        06
+                    </span>
+
+                </div>
+
+
+                <h2 class="contact-title">
+
+                    <span class="reveal">
+                        INTERESTED IN
+                    </span>
+
+                    <span class="reveal">
+                        LEARNING
+                    </span>
+
+                    <span class="gold-text reveal">
+                        MORE?
+                    </span>
+
+                </h2>
+
+
+                <div class="contact-bottom">
+
+
+                    <p class="reveal">
+
+                        Speak with a Bullion Bridge
+                        representative to learn more about
+                        current opportunities, eligibility
+                        and applicable documentation.
+
+                    </p>
+
+
+                    <a
+                        href="mailto:hello@bullionbridge.com"
+                        class="contact-button reveal"
+                    >
+
+                        <span>
+                            SPEAK TO US
+                        </span>
+
+                        <span class="contact-button-circle">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+                <div class="contact-footer reveal">
+
+
+                    <div class="footer-brand">
+
+                        <strong>
+                            BULLION
+                        </strong>
+
+                        <span>
+                            BRIDGE
+                        </span>
+
+                    </div>
+
+
+                    <div class="footer-location">
+
+                        <span>
+                            LONDON
+                        </span>
+
+                        <span>
+                            UNITED KINGDOM
+                        </span>
+
+                    </div>
+
+
+                    <a href="#home">
+                        BACK TO TOP ↑
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             RISK INFORMATION
+        ====================================== -->
+
+        <section class="risk-section">
+
+            <div class="risk-inner">
+
+                <strong>
+                    IMPORTANT INFORMATION
+                </strong>
+
+                <p>
+                    Investment involves risk. Investment
+                    opportunities may only be available to
+                    eligible investors and are subject to
+                    applicable offering documentation, terms
+                    and conditions. Prospective investors
+                    should obtain appropriate independent
+                    financial, legal and tax advice before
+                    making an investment decision.
+                </p>
+
+                <p>
+                    This prototype is a front-end design
+                    concept and is not an offer or invitation
+                    to invest.
+                </p>
+
+                <span>
+                    © 2026 Bullion Bridge Limited · Company No. 12416766 · 1–2 Charterhouse Mews, London EC1M 6BB
+                </span>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         CUSTOM CURSOR
+    ========================================== -->
+
+    <div
+        class="custom-cursor"
+        id="custom-cursor"
+    ></div>
+
+
+    <div
+        class="cursor-ring"
+        id="cursor-ring"
+    ></div>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

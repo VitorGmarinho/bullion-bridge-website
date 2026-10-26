@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Bullion Bridge — connecting professional capital with opportunities across the physical precious metals supply chain." name="description"/>
+<title>Gold &amp; Silver Markets | Bullion Bridge</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- CSS -->
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+/* Additive styles for the new sections; original stylesheet stays intact. */
+.bb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.bb-tile{display:flex;flex-direction:column;gap:18px;padding:30px;border:1px solid rgba(160,166,180,.3);background:rgba(100,115,140,.07);min-height:220px;transition:transform .25s,border-color .25s}
+.bb-tile:hover{transform:translateY(-5px);border-color:#d6ad63}
+.bb-tile small{font-size:11px;letter-spacing:.13em;color:#c39b57}
+.bb-tile h3{font-size:clamp(1rem,1.6vw,1.35rem);line-height:1.5;font-weight:600}
+.bb-tile span{margin-top:auto;font-size:12px;letter-spacing:.05em}
+@media(max-width:1050px){.desktop-nav{gap:14px}.desktop-nav a{font-size:10px}}
+</style>
+<style>
+/* Cinematic news: additive only; original homepage CSS and JS are unchanged. */
+.news-hero-cine .hero-title{font-size:clamp(4rem,10vw,10rem)}
+.news-story-section{min-height:100vh;display:flex;align-items:center;padding:110px 0}
+.news-feature-grid{display:grid;grid-template-columns:1.08fr 1fr;gap:clamp(32px,5vw,95px);align-items:center;margin-top:44px}
+.news-feature-grid.news-reverse .news-image-wrap{order:2}
+.news-image-wrap{height:clamp(300px,43vw,580px);position:relative;overflow:hidden;border:1px solid rgba(212,171,104,.3)}
+.news-image-wrap:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,17,34,.4),transparent 65%);pointer-events:none}
+.news-image-wrap img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.news-image-wrap:hover img{transform:scale(1.05)}
+.news-meta{font-size:11px;letter-spacing:.2em;color:#d4ab68;font-weight:700}
+.news-feature-copy h2{font-family:Manrope,sans-serif;font-size:clamp(2.6rem,5.2vw,6.5rem);line-height:1.02;letter-spacing:-.055em;margin:20px 0}
+.news-feature-copy h3{font-family:Manrope,sans-serif;font-size:clamp(1.3rem,2vw,2rem);line-height:1.35;margin:0 0 18px}
+.news-feature-copy p,.news-article p{font-size:clamp(15px,1.35vw,18px);line-height:1.85;max-width:600px;opacity:.8}
+.news-feature-copy .outline-button{margin-top:28px;display:inline-flex}
+.news-reading{padding:110px 0 150px;min-height:100vh}
+.news-reading-title{font-size:clamp(3.4rem,7vw,8rem);letter-spacing:-.06em;line-height:1.05;margin:35px 0 60px}
+.news-article{border-top:1px solid rgba(180,180,180,.25);padding:36px 0 46px;scroll-margin-top:100px}
+.news-article h3{font-size:clamp(1.5rem,3vw,2.7rem);line-height:1.2;margin:14px 0 22px;max-width:850px}
+.news-disclaimer{font-size:12px;opacity:.7;line-height:1.7;max-width:700px;margin:35px 0}
+@media(max-width:800px){.news-story-section{padding:90px 0}.news-feature-grid{grid-template-columns:1fr;gap:28px}.news-feature-grid.news-reverse .news-image-wrap{order:0}.news-image-wrap{height:320px}.news-feature-copy h2{font-size:clamp(2.6rem,10vw,4.5rem)}.news-reading{padding:90px 0}}
+</style><style id="news-cursor-fix">
+/* News cursor fallback: independent of homepage CSS and animation initialization. */
+@media (hover:hover) and (pointer:fine) {
+  body, a, button { cursor: none !important; }
+  #custom-cursor, #cursor-ring { position:fixed !important; left:0; top:0; display:block !important; visibility:visible !important; opacity:1 !important; pointer-events:none !important; border-radius:50%; }
+  #custom-cursor { width:7px !important; height:7px !important; background:#d6ad63 !important; z-index:2147483647 !important; transform:translate(-50%,-50%) !important; }
+  #cursor-ring { width:38px !important; height:38px !important; border:1px solid rgba(214,173,99,.85) !important; background:rgba(214,173,99,.06) !important; z-index:2147483646 !important; transform:translate(-50%,-50%) !important; transition:width .2s,height .2s !important; }
+  #cursor-ring.hover { width:56px !important; height:56px !important; }
+}
+@media (hover:none), (pointer:coarse) { #custom-cursor,#cursor-ring { display:none !important; } }
+</style>
+<style id="market-page-styles">
+.market-intro{max-width:680px;line-height:1.8;color:#d2d5dd}
+.market-panel{width:100%;border:1px solid rgba(214,173,99,.32);background:rgba(7,18,34,.7);padding:clamp(16px,3vw,34px);margin-top:36px}
+.market-panel-heading{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.market-panel-heading strong{font-family:Manrope,sans-serif;color:#d6ad63;letter-spacing:.13em;font-size:12px}
+.market-panel-heading span{font-size:12px;color:#c5cad4}
+.market-chart{width:100%;height:min(58vh,530px);min-height:360px;position:relative}
+.market-chart iframe{width:100%;height:100%;border:0;background:#101b2d}
+.market-hint{font-size:13px;line-height:1.8;color:#c2c7d0;margin-top:20px}
+.market-title{font-size:clamp(3rem,8vw,7rem);line-height:1.06;letter-spacing:-.055em;font-family:Manrope,sans-serif}
+.market-section .section-content{width:100%;max-width:1280px}
+.market-section{min-height:100vh;padding:120px 0 90px}
+.market-source{color:#d6ad63;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:650px){.market-chart{min-height:320px;height:52vh}.market-section{padding:105px 0 60px}}
+</style></head>
+<body>
+<!-- =========================================
+         PAGE LOADER
+    ========================================== -->
+<div class="loader" id="loader">
+<div class="loader-logo">
+<span>BULLION</span>
+<strong>BRIDGE</strong>
+</div>
+<div class="loader-line">
+<span></span>
+</div>
+<div class="loader-number">
+<span id="loader-number">0</span>%
+        </div>
+</div>
+<!-- =========================================
+         BACKGROUND
+    ========================================== -->
+<div class="site-background">
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+<div class="background-grid"></div>
+</div>
+<!-- =========================================
+         SCROLL PROGRESS
+    ========================================== -->
+<div class="scroll-progress">
+<div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+</div>
+<!-- =========================================
+         HEADER
+    ========================================== -->
+<header class="site-header" id="site-header">
+<div class="header-inner">
+<!-- Logo -->
+<a aria-label="Bullion Bridge home" class="brand" href="index.html">
+<span class="brand-mark">
+                    BB
+                </span>
+<span class="brand-name">
+<strong>BULLION</strong>
+<small>BRIDGE</small>
+</span>
+</a>
+<!-- Desktop Navigation -->
+<nav aria-label="Main navigation" class="desktop-nav">
+<a href="about.html">
+                    About Us
+                </a>
+<a href="index.html#opportunity">
+                    Opportunity
+                </a>
+<a href="index.html#bond">
+                    Gold Bond
+                </a>
+<a href="index.html#process">
+                    How it works
+                </a>
+<a href="index.html#responsible">
+                    Responsible sourcing
+                </a>
+<a href="markets.html">Markets</a></nav>
+<a class="header-contact" href="news.html" style="padding:10px 16px">News</a>
+<a class="header-contact" href="index.html#documents" style="padding:10px 16px">Documents</a>
+<!-- CTA -->
+<a class="header-contact" href="index.html#contact">
+<span>Speak to us</span>
+<span class="header-contact-arrow">
+                    ↗
+                </span>
+</a>
+<!-- Mobile Menu Button -->
+<button aria-expanded="false" aria-label="Open navigation" class="menu-button" id="menu-button" type="button">
+<span></span>
+<span></span>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+<a href="about.html">
+                About Us
+            </a>
+<a href="index.html#opportunity">
+                Opportunity
+            </a>
+<a href="index.html#bond">
+                Gold Bond
+            </a>
+<a href="index.html#process">
+                How it works
+            </a>
+<a href="index.html#responsible">
+                Responsible sourcing
+            </a>
+<a href="news.html">News</a>
+<a href="index.html#documents">Documents</a>
+<a href="index.html#contact">
+                Speak to us
+            </a>
+<a href="markets.html">Markets</a></div>
+</header>
+<!-- =========================================
+         SIDE NAVIGATION
+    ========================================== -->
+<aside class="side-navigation">
+<span class="side-number">
+            01
+        </span>
+<div class="side-line">
+<span id="side-line-progress"></span>
+</div>
+<span class="side-number">04</span>
+</aside>
+<!-- =========================================
+         MAIN
+    ========================================== -->
+<main>
+<section class="story-section hero-section" data-section="01" id="home">
+<div class="section-orb orb-one"></div><div class="section-content hero-content">
+<div class="section-label reveal"><span class="label-line"></span><span>PRECIOUS METALS / MARKET INFORMATION</span><span class="label-number">01</span></div>
+<h1 class="hero-title"><span class="title-line reveal">GOLD &amp;</span><span class="title-line gold-text reveal">SILVER.</span></h1>
+<div class="hero-bottom"><p class="hero-description reveal">Explore indicative US-dollar market pricing and historical price charts for the two precious metals featured on the original Bullion Bridge website.</p>
+<a class="scroll-indicator reveal" href="#gold"><span class="scroll-circle">↓</span><span>EXPLORE MARKETS</span></a></div>
+<div class="hero-meta reveal"><span>GOLD / XAU</span><span>SILVER / XAG</span><span>USD PER TROY OUNCE</span></div>
+</div></section>
+<section class="story-section opportunity-section market-section" data-section="02" id="gold"><div class="section-content">
+<div class="section-label reveal"><span class="label-line"></span><span>01 / GOLD MARKET</span><span class="label-number">02</span></div>
+<h2 class="market-title reveal">PHYSICAL <span class="gold-text">GOLD.</span></h2>
+<p class="market-intro reveal">Gold market price and historical movement, quoted in US dollars per troy ounce. The chart loads third-party indicative data when an internet connection is available.</p>
+<div class="market-panel reveal"><div class="market-panel-heading"><strong>GOLD / USD — XAUUSD</strong><span>LIVE THIRD-PARTY CHART · INDICATIVE</span></div>
+<div class="market-chart"><iframe loading="lazy" referrerpolicy="origin" src="https://s.tradingview.com/widgetembed/?frameElementId=bb-gold-chart&amp;symbol=OANDA%3AXAUUSD&amp;interval=D&amp;hidesidetoolbar=1&amp;saveimage=0&amp;toolbarbg=0f1b2e&amp;studies=%5B%5D&amp;theme=dark&amp;style=1&amp;timezone=Etc%2FUTC&amp;withdateranges=1&amp;hideideas=1&amp;locale=en" title="Gold US dollar market chart"></iframe></div>
+<p class="market-hint">Use the chart controls to explore historical periods. If the embedded chart does not load in your preview, <a class="market-source" href="https://www.tradingview.com/symbols/XAUUSD/" rel="noopener noreferrer" target="_blank">view gold market data at TradingView</a>.</p></div>
+</div></section>
+<section class="story-section process-section market-section" data-section="03" id="silver"><div class="section-content">
+<div class="section-label reveal"><span class="label-line"></span><span>02 / SILVER MARKET</span><span class="label-number">03</span></div>
+<h2 class="market-title reveal">PHYSICAL <span class="gold-text">SILVER.</span></h2>
+<p class="market-intro reveal">Silver market price and historical movement, quoted in US dollars per troy ounce. The chart loads third-party indicative data when an internet connection is available.</p>
+<div class="market-panel reveal"><div class="market-panel-heading"><strong>SILVER / USD — XAGUSD</strong><span>LIVE THIRD-PARTY CHART · INDICATIVE</span></div>
+<div class="market-chart"><iframe loading="lazy" referrerpolicy="origin" src="https://s.tradingview.com/widgetembed/?frameElementId=bb-silver-chart&amp;symbol=OANDA%3AXAGUSD&amp;interval=D&amp;hidesidetoolbar=1&amp;saveimage=0&amp;toolbarbg=0f1b2e&amp;studies=%5B%5D&amp;theme=dark&amp;style=1&amp;timezone=Etc%2FUTC&amp;withdateranges=1&amp;hideideas=1&amp;locale=en" title="Silver US dollar market chart"></iframe></div>
+<p class="market-hint">Use the chart controls to explore historical periods. If the embedded chart does not load in your preview, <a class="market-source" href="https://www.tradingview.com/symbols/XAGUSD/" rel="noopener noreferrer" target="_blank">view silver market data at TradingView</a>.</p></div>
+</div></section>
+<section class="story-section responsible-section market-section" data-section="04" id="information"><div class="section-content">
+<div class="section-label reveal"><span class="label-line"></span><span>IMPORTANT MARKET INFORMATION</span><span class="label-number">04</span></div>
+<h2 class="market-title reveal">INFORMED <span class="gold-text">DECISIONS.</span></h2>
+<p class="market-intro reveal" style="margin-top:32px">These charts display indicative third-party XAU/USD and XAG/USD market quotes, which may be delayed, may not represent a physical bullion transaction price, and may differ from other price feeds. Chart availability depends on the provider and your browser connection.</p>
+<p class="market-intro reveal" style="margin-top:20px">This information is educational and does not constitute an investment recommendation, an offer to invest or a guaranteed price. Always consult the relevant product documentation and obtain independent advice where appropriate.</p>
+<a class="outline-button reveal" href="index.html#contact" style="display:inline-flex;margin-top:40px"><span>CONTACT BULLION BRIDGE</span><span>↗</span></a>
+</div></section>
+</main>
+<!-- =========================================
+         CUSTOM CURSOR
+    ========================================== -->
+<div class="custom-cursor" id="custom-cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+<script id="news-cursor-fallback">
+/* Independent pointer handler: keeps the gold cursor visible even if the shared JS has an error. */
+(() => {
+  if (!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  const dot = document.getElementById('custom-cursor');
+  const ring = document.getElementById('cursor-ring');
+  if (!dot || !ring) return;
+  let x = -100, y = -100, rx = -100, ry = -100;
+  window.addEventListener('pointermove', e => {
+    x = e.clientX; y = e.clientY;
+    dot.style.left = x + 'px'; dot.style.top = y + 'px';
+  }, {passive:true});
+  function frame() {
+    rx += (x-rx)*0.18; ry += (y-ry)*0.18;
+    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+    requestAnimationFrame(frame);
+  }
+  frame();
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('pointerenter', () => ring.classList.add('hover'));
+    el.addEventListener('pointerleave', () => ring.classList.remove('hover'));
+  });
+})();
+</script>
+</body>
+</html>
