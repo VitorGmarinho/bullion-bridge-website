@@ -1,367 +1,733 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
  <head>
+
   <meta charset="utf-8"/>
+
   <meta content="width=device-width,initial-scale=1" name="viewport"/>
+
   <meta content="Bullion Bridge research library — responsible sourcing and artisanal mining resources." name="description"/>
+
   <title>
-   Documents &amp; Research | Bullion Bridge
+
+   Documents & Research | Bullion Bridge
+
   </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+  <link href="https\://fonts.googleapis.com" rel="preconnect"/>
+
+  <link crossorigin="" href="https\://fonts.gstatic.com" rel="preconnect"/>
+
+  <link href="https\://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
   <style>
+
    :root{--navy:#071324;--navy2:#0e2036;--gold:#d7b271;--cream:#f4f1e9;--muted:#a7b0bc}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}body:before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 80% 20%,rgba(29,67,99,.24),transparent 45%),linear-gradient(90deg,transparent 97%,rgba(255,255,255,.018) 98%);background-size:auto,80px 80px;z-index:-1}a{color:inherit;text-decoration:none}button{font:inherit}.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--gold);z-index:100}.header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:21px clamp(22px,5vw,90px);background:rgba(7,19,36,.88);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(15px)}.logo{display:flex;gap:12px;align-items:center;font:800 15px/1.05 Manrope,sans-serif;letter-spacing:.09em}.logo-mark{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--gold);color:var(--gold);font-size:13px}.logo small{display:block;color:var(--gold);letter-spacing:.32em;font-size:10px;margin-top:5px}.nav{display:flex;align-items:center;gap:clamp(12px,2vw,30px)}.nav a{font-size:12px;color:#d2d8e0;transition:color .2s}.nav a:hover,.nav a[aria-current]{color:var(--gold)}.menu-toggle{display:none;border:1px solid #657083;background:transparent;color:white;padding:9px 13px}.hero{min-height:100svh;display:flex;align-items:center;padding:140px clamp(24px,8vw,150px) 80px;position:relative}.hero:after{content:'';position:absolute;width:min(50vw,650px);aspect-ratio:1;border:1px solid rgba(215,178,113,.2);border-radius:50%;right:-10%;top:18%;box-shadow:0 0 110px 30px rgba(42,75,118,.2);pointer-events:none}.hero-inner{position:relative;z-index:1;max-width:1100px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.26em;color:var(--gold);text-transform:uppercase}.hero h1{font:800 clamp(3.2rem,8.8vw,9.5rem)/.97 Manrope,sans-serif;letter-spacing:-.065em;margin:28px 0;max-width:1100px}.gold{color:var(--gold)}.hero p.intro{max-width:640px;font-size:clamp(16px,1.6vw,21px);line-height:1.7;color:#c2cbd6}.hero-actions{display:flex;gap:16px;align-items:center;margin-top:35px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:17px 22px;border:1px solid rgba(215,178,113,.6);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.08em;transition:background .2s,color .2s,transform .2s}.button:hover{transform:translateY(-3px);background:var(--gold);color:var(--navy)}.button.primary{background:var(--gold);color:var(--navy)}.button.primary:hover{background:#f2d6a3}.library-strip{display:flex;flex-wrap:wrap;gap:12px 30px;padding:22px clamp(24px,8vw,150px);border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1);font-size:11px;letter-spacing:.1em;color:var(--muted)}.library-strip strong{color:var(--gold)}.report-panel{min-height:100svh;display:flex;align-items:center;padding:130px clamp(24px,8vw,150px) 90px;border-bottom:1px solid rgba(255,255,255,.09)}.report-panel:nth-of-type(even){background:rgba(255,255,255,.018)}.report-inner{width:100%;max-width:1360px;margin:auto;display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1.18fr);align-items:center;gap:clamp(30px,6vw,110px)}.report-cover{aspect-ratio:4/5;max-height:610px;min-height:330px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(145deg,#183651,#08172b 65%,#152b41);border:1px solid rgba(215,178,113,.35);box-shadow:25px 25px 75px rgba(0,0,0,.22);position:relative;overflow:hidden}.report-cover:before{content:'';position:absolute;inset:15%;border:1px solid rgba(215,178,113,.22);border-radius:50%;transform:translate(30%,12%);pointer-events:none}.cover-top,.cover-bottom{font-size:10px;letter-spacing:.15em;color:#bfc6ce}.cover-number{font:800 clamp(6rem,16vw,15rem)/1 Manrope,sans-serif;color:rgba(215,178,113,.17);letter-spacing:-.08em}.cover-name{font:800 clamp(1.7rem,3vw,3.2rem)/1.05 Manrope,sans-serif;color:var(--gold);max-width:90%;overflow-wrap:anywhere}.report-copy h2{font:800 clamp(2.3rem,4.3vw,5.5rem)/1.09 Manrope,sans-serif;letter-spacing:-.055em;margin:22px 0}.description{font-size:clamp(16px,1.5vw,20px);line-height:1.7;color:#d1d7df;max-width:600px}.note{color:var(--muted);font-size:13px;line-height:1.7;max-width:590px}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}.footer{padding:80px clamp(24px,8vw,150px);display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;border-top:1px solid rgba(255,255,255,.12)}.footer p{color:var(--muted);font-size:13px;line-height:1.7;max-width:680px}.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}#custom-cursor,#cursor-ring{display:none;position:fixed;top:0;left:0;pointer-events:none;border-radius:50%;z-index:99999;transform:translate(-50%,-50%)}@media(hover:hover) and (pointer:fine){body,a,button{cursor:none}#custom-cursor{display:block;width:7px;height:7px;background:var(--gold)}#cursor-ring{display:block;width:38px;height:38px;border:1px solid var(--gold);background:rgba(215,178,113,.05);transition:width .2s,height .2s}#cursor-ring.hover{width:55px;height:55px}}@media(max-width:850px){.header{padding:15px 22px}.menu-toggle{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:#0b1c30;padding:20px 25px;gap:0;border-bottom:1px solid #34475c}.nav.open{display:flex}.nav a{padding:13px 5px}.hero{padding-top:130px}.report-inner{grid-template-columns:1fr}.report-cover{min-height:250px;max-height:390px;aspect-ratio:16/9}.cover-number{font-size:8rem}.report-panel{padding-top:110px}.report-copy h2{font-size:clamp(2.2rem,8vw,4rem)}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
   </style>
+
  </head>
+
  <body>
+
   <div class="progress" id="progress">
+
   </div>
+
   <header class="header">
+
    <a aria-label="Bullion Bridge home" class="logo" href="index.html">
+
     <span class="logo-mark">
+
      BB
+
     </span>
+
     <span>
+
      BULLION
+
      <small>
+
       BRIDGE
+
      </small>
+
     </span>
+
    </a>
+
    <button aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle">
+
     MENU ☰
+
    </button>
+
    <nav aria-label="Main navigation" class="nav" id="nav">
+
     <a href="index.html">
+
      Home
+
     </a>
+
     <a href="about.html">
+
      About
+
     </a>
+
     <a href="index.html#bond">
+
      Gold Bond
+
     </a>
+
     <a href="markets.html">
+
      Markets
+
     </a>
+
     <a href="news.html">
+
      News
+
     </a>
+
     <a aria-current="page" href="documents.html">
+
      Documents
+
     </a>
+
     <a href="index.html#contact">
+
      Contact
+
     </a>
+
    </nav>
+
   </header>
+
   <main>
+
    <section class="hero">
+
     <div class="hero-inner reveal">
+
      <p class="eyebrow">
+
       Bullion Bridge / Research library
+
      </p>
+
      <h1>
+
       DOCUMENTS
+
       <span class="gold">
-       &amp; RESEARCH.
+
+       & RESEARCH.
+
       </span>
+
      </h1>
+
      <p class="intro">
+
       Explore five original research publications on responsible sourcing, artisanal mining, finance, participation and environmental practices.
+
      </p>
+
      <div class="hero-actions">
+
       <a class="button primary" href="#report-1">
+
        Explore library
+
        <span>
+
         ↓
+
        </span>
+
       </a>
+
       <a class="button" href="index.html">
+
        Return home
+
        <span>
+
         ↗
+
        </span>
+
       </a>
+
      </div>
+
     </div>
+
    </section>
+
    <div class="library-strip">
+
     <span>
+
      <strong>
+
       05
+
      </strong>
+
      RESEARCH DOCUMENTS
+
     </span>
+
     <span>
+
      <strong>
+
       05
+
      </strong>
+
      LOCAL PDF FILES
+
     </span>
+
     <span>
+
      INDEPENDENT THIRD-PARTY PUBLICATIONS
+
     </span>
+
    </div>
+
    <section class="report-panel" id="report-1">
+
     <div class="report-inner">
+
      <div class="report-cover">
+
       <span class="cover-top">
+
        BULLION BRIDGE / RESEARCH LIBRARY
+
       </span>
+
       <div class="cover-number">
+
        01
+
       </div>
+
       <div class="cover-name">
+
        OECD
+
       </div>
+
       <span class="cover-bottom">
+
        9 PAGES · PDF
+
       </span>
+
      </div>
+
      <div class="report-copy">
+
       <p class="eyebrow">
+
        01 / 05   —   OECD
+
       </p>
+
       <h2>
+
        Responsible Supply Chains in Artisanal and Small-Scale Gold Mining
+
       </h2>
+
       <p class="description">
+
        Practical guidance on due diligence and responsible sourcing of artisanal gold.
+
       </p>
+
       <p class="note">
+
        Third-party publication. The document is presented for research and information, not as a statement of Bullion Bridge's policies.
+
       </p>
+
       <div class="actions">
-       <a class="button primary" href="pdfs/oecd-responsible-supply-chains.pdf" rel="noopener" target="_blank">
+
+       <a class="button primary" href="pdfs/OECD-Report-Responsible-Supply-Chains-in-Artisanal-and-Small-Scale-Gold-Mining.pdf" rel="noopener" target="_blank">
+
         Read PDF
+
         <span>
+
          ↗
+
         </span>
+
        </a>
-       <a class="button" download="" href="pdfs/oecd-responsible-supply-chains.pdf">
+
+       <a class="button" download="" href="pdfs/OECD-Report-Responsible-Supply-Chains-in-Artisanal-and-Small-Scale-Gold-Mining.pdf">
+
         Download
+
         <span>
+
          ↓
+
         </span>
+
        </a>
+
       </div>
+
      </div>
+
     </div>
+
    </section>
+
    <section class="report-panel" id="report-2">
+
     <div class="report-inner">
+
      <div class="report-cover">
+
       <span class="cover-top">
+
        BULLION BRIDGE / RESEARCH LIBRARY
+
       </span>
+
       <div class="cover-number">
+
        02
+
       </div>
+
       <div class="cover-name">
+
        ARTISANAL GOLD COUNCIL
+
       </div>
+
       <span class="cover-bottom">
+
        16 PAGES · PDF
+
       </span>
+
      </div>
+
      <div class="report-copy">
+
       <p class="eyebrow">
+
        02 / 05   —   ARTISANAL GOLD COUNCIL
+
       </p>
+
       <h2>
+
        Improving Access to Finance
+
       </h2>
+
       <p class="description">
+
        A presentation on financing models and the transition to more responsible artisanal gold mining.
+
       </p>
+
       <p class="note">
+
        Third-party publication. The document is presented for research and information, not as a statement of Bullion Bridge's policies.
+
       </p>
+
       <div class="actions">
-       <a class="button primary" href="pdfs/agc-improving-access-to-finance.pdf" rel="noopener" target="_blank">
+
+       <a class="button primary" href="pdfs/Artisanal-Gold-Council-Improving-Access-to-Finance.pdf" rel="noopener" target="_blank">
+
         Read PDF
+
         <span>
+
          ↗
+
         </span>
+
        </a>
-       <a class="button" download="" href="pdfs/agc-improving-access-to-finance.pdf">
+
+       <a class="button" download="" href="pdfs/Artisanal-Gold-Council-Improving-Access-to-Finance.pdf">
+
         Download
+
         <span>
+
          ↓
+
         </span>
+
        </a>
+
       </div>
+
      </div>
+
     </div>
+
    </section>
+
    <section class="report-panel" id="report-3">
+
     <div class="report-inner">
+
      <div class="report-cover">
+
       <span class="cover-top">
+
        BULLION BRIDGE / RESEARCH LIBRARY
+
       </span>
+
       <div class="cover-number">
+
        03
+
       </div>
+
       <div class="cover-name">
+
        IGF / IISD
+
       </div>
+
       <span class="cover-bottom">
+
        90 PAGES · PDF
+
       </span>
+
      </div>
+
      <div class="report-copy">
+
       <p class="eyebrow">
+
        03 / 05   —   IGF / IISD
+
       </p>
+
       <h2>
+
        Global Trends in Artisanal and Small-Scale Mining
+
       </h2>
+
       <p class="description">
+
        A review of sector trends, livelihoods, challenges and policy considerations.
+
       </p>
+
       <p class="note">
+
        Third-party publication. The document is presented for research and information, not as a statement of Bullion Bridge's policies.
+
       </p>
+
       <div class="actions">
-       <a class="button primary" href="pdfs/igf-global-trends-asm.pdf" rel="noopener" target="_blank">
+
+       <a class="button primary" href="pdfs/Intergovernmental-Forum-Global-Trends-in-Artisanal-and-Small-Scale-Mining-ASM.pdf" rel="noopener" target="_blank">
+
         Read PDF
+
         <span>
+
          ↗
+
         </span>
+
        </a>
-       <a class="button" download="" href="pdfs/igf-global-trends-asm.pdf">
+
+       <a class="button" download="" href="pdfs/Intergovernmental-Forum-Global-Trends-in-Artisanal-and-Small-Scale-Mining-ASM.pdf">
+
         Download
+
         <span>
+
          ↓
+
         </span>
+
        </a>
+
       </div>
+
      </div>
+
     </div>
+
    </section>
+
    <section class="report-panel" id="report-4">
+
     <div class="report-inner">
+
      <div class="report-cover">
+
       <span class="cover-top">
+
        BULLION BRIDGE / RESEARCH LIBRARY
+
       </span>
+
       <div class="cover-number">
+
        04
+
       </div>
+
       <div class="cover-name">
+
        IGF / IISD
+
       </div>
+
       <span class="cover-bottom">
+
        32 PAGES · PDF
+
       </span>
+
      </div>
+
      <div class="report-copy">
+
       <p class="eyebrow">
+
        04 / 05   —   IGF / IISD
+
       </p>
+
       <h2>
+
        Women in Artisanal and Small-Scale Mining
+
       </h2>
+
       <p class="description">
+
        Research on women’s participation, barriers and opportunities in artisanal mining.
+
       </p>
+
       <p class="note">
+
        Third-party publication. The document is presented for research and information, not as a statement of Bullion Bridge's policies.
+
       </p>
+
       <div class="actions">
-       <a class="button primary" href="pdfs/igf-women-in-asm.pdf" rel="noopener" target="_blank">
+
+       <a class="button primary" href="pdfs/Intergovernmental-Forum-Women-in-Artisanal-and-Small-Scale-Mining.pdf" rel="noopener" target="_blank">
+
         Read PDF
+
         <span>
+
          ↗
+
         </span>
+
        </a>
-       <a class="button" download="" href="pdfs/igf-women-in-asm.pdf">
+
+       <a class="button" download="" href="pdfs/Intergovernmental-Forum-Women-in-Artisanal-and-Small-Scale-Mining.pdf">
+
         Download
+
         <span>
+
          ↓
+
         </span>
+
        </a>
+
       </div>
+
      </div>
+
     </div>
+
    </section>
+
    <section class="report-panel" id="report-5">
+
     <div class="report-inner">
+
      <div class="report-cover">
+
       <span class="cover-top">
+
        BULLION BRIDGE / RESEARCH LIBRARY
+
       </span>
+
       <div class="cover-number">
+
        05
+
       </div>
+
       <div class="cover-name">
+
        USAID
+
       </div>
+
       <span class="cover-bottom">
+
        96 PAGES · PDF
+
       </span>
+
      </div>
+
      <div class="report-copy">
+
       <p class="eyebrow">
+
        05 / 05   —   USAID
+
       </p>
+
       <h2>
+
        Sector Environmental Guideline: Artisanal and Small-Scale Mining
+
       </h2>
+
       <p class="description">
+
        Environmental and health considerations, mitigation approaches and practical guidance.
+
       </p>
+
       <p class="note">
+
        Third-party publication. The document is presented for research and information, not as a statement of Bullion Bridge's policies.
+
       </p>
+
       <div class="actions">
-       <a class="button primary" href="pdfs/usaid-environmental-guideline-asm.pdf" rel="noopener" target="_blank">
+
+       <a class="button primary" href="pdfs/USAID-SECTOR-ENVIRONMENTAL-GUIDELINE-ARTISANAL-AND-SMALL-SCALE-MINING.pdf" rel="noopener" target="_blank">
+
         Read PDF
+
         <span>
+
          ↗
+
         </span>
+
        </a>
-       <a class="button" download="" href="pdfs/usaid-environmental-guideline-asm.pdf">
+
+       <a class="button" download="" href="pdfs/USAID-SECTOR-ENVIRONMENTAL-GUIDELINE-ARTISANAL-AND-SMALL-SCALE-MINING.pdf">
+
         Download
+
         <span>
+
          ↓
+
         </span>
+
        </a>
+
       </div>
+
      </div>
+
     </div>
+
    </section>
+
   </main>
+
   <footer class="footer">
+
    <div>
+
     <a class="logo" href="index.html">
+
      <span class="logo-mark">
+
       BB
+
      </span>
+
      <span>
+
       BULLION
+
       <small>
+
        BRIDGE
+
       </small>
+
      </span>
+
     </a>
+
     <p>
+
      Research materials are published by their respective organisations and are provided for general information only. Their inclusion does not imply endorsement of Bullion Bridge by the publishers.
+
     </p>
+
    </div>
+
    <a class="button" href="#" id="backTop">
+
     Back to top ↑
+
    </a>
+
   </footer>
+
   <div id="custom-cursor">
+
   </div>
+
   <div id="cursor-ring">
+
   </div>
+
   <script>
+
    const nav=document.getElementById('nav'),toggle=document.getElementById('menuToggle');toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));const reveals=document.querySelectorAll('.reveal,.report-inner');if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.1});reveals.forEach(el=>{el.classList.add('reveal');observer.observe(el)})}else reveals.forEach(el=>el.classList.add('visible'));const progress=document.getElementById('progress');function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?scrollY/max*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();if(matchMedia('(hover:hover) and (pointer:fine)').matches){const dot=document.getElementById('custom-cursor'),ring=document.getElementById('cursor-ring');let x=-100,y=-100,rx=-100,ry=-100;addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;dot.style.left=x+'px';dot.style.top=y+'px'},{passive:true});function animate(){rx+=(x-rx)*.2;ry+=(y-ry)*.2;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animate)}animate();document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('pointerenter',()=>ring.classList.add('hover'));el.addEventListener('pointerleave',()=>ring.classList.remove('hover'))})}
+
   </script>
+
  </body>
+
 </html>
